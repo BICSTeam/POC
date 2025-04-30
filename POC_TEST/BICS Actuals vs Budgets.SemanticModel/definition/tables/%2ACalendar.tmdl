@@ -1,0 +1,149 @@
+table *Calendar
+	lineageTag: 542d04b0-27b6-405c-b0db-4692df42136b
+
+	column Date
+		formatString: Short Date
+		lineageTag: 0dc4620b-1245-4686-9de2-75c4f979a26d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: ed103b41-c57a-4419-8d8d-e92eac887f66
+			defaultHierarchy: LocalDateTable_7b8fb449-29e3-4892-a01f-4bc4553faf4f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 173ec3b5-36bb-4c40-9016-93fbd8f4a5e9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: d44ded8d-89f1-45db-8d39-67ac8a00cdc6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of the Month'
+		formatString: 0
+		lineageTag: 0750c39a-b605-4992-beda-ecc18b86186d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day of the Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		formatString: 0
+		lineageTag: 438b615b-efbd-4fde-8711-9572d9d24468
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Number'
+		formatString: 0
+		lineageTag: fd9dfe1b-e73b-4bed-9cba-930260d55785
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Week Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter1
+		formatString: 0
+		lineageTag: ed83c18c-01aa-4ddc-82c9-841fcbb8877d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Quarter1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 589144b7-3e94-4cc4-823c-68da9858c93c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of the Week'
+		lineageTag: 9971a081-896a-4217-a9de-a2fb80dd0473
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day of the Week]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: dc24b149-7c44-4f25-b23a-1c171046aa52
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Week Date'
+		formatString: Short Date
+		lineageTag: 5cdbb6db-8514-4278-b0a3-9698783940a3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Reporting Week Date]
+
+		variation Variation
+			isDefault
+			relationship: 51ccb4f2-83e8-4766-895d-2f5f82aba0b5
+			defaultHierarchy: LocalDateTable_289bb6d7-090f-41bc-b4a8-3e5de78e231b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month and Year'
+		lineageTag: 9fe85e74-9179-4a69-bfc2-48531217670a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month and Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Future Date Flag'
+		formatString: 0
+		lineageTag: 3a6c40a2-a7f4-4f59-af4b-482b74b6ec62
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Future Date Flag]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition *Calendar = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				CALENDAR (DATE (2023, 1, 1), DATE (2026, 12, 31)),
+				"Year", YEAR([Date]),
+				"Month Number", MONTH([Date]),
+				"Day of the Month", DAY([Date]),
+				"Weekday", WEEKDAY([Date]),
+				"Week Number", WEEKNUM([Date]),
+				//"Month of the Year", MONTH([Date])&" "&YEAR([Date]),
+				"Quarter1", QUARTER([Date]),
+				"Quarter", CONCATENATE("Q", FORMAT([Date], "Q")),
+				"Day of the Week", FORMAT([Date], "dddd"),
+				 "Month", FORMAT([Date], "MMMM"),
+				"Reporting Week Date", [Date] - WEEKDAY([Date], 2) + 1,
+				"Month and Year", FORMAT([Date], "MMM yy"),
+				"Future Date Flag", IF([Date] >= TODAY(), 1, 0)
+				)
+
+	annotation PBI_Id = 9c86cc4dc0c144b78de2b2b36e531e8b
+

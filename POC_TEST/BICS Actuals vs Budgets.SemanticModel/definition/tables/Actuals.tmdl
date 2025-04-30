@@ -1,0 +1,183 @@
+table Actuals
+	lineageTag: 7945df22-b12b-412a-9e8d-153f52fda7e0
+
+	column Organization
+		dataType: string
+		lineageTag: e981bc1f-ad07-46b8-9cea-de6b889c8903
+		summarizeBy: none
+		sourceColumn: Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time zone'
+		dataType: string
+		lineageTag: a13d7d2c-b149-421b-8266-e9c198965848
+		summarizeBy: none
+		sourceColumn: Time zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1a8a477b-bfee-4080-bd08-3ad26e925b4d
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Project
+		dataType: string
+		lineageTag: df544df1-b32d-483d-95cb-7b445fa4335f
+		summarizeBy: none
+		sourceColumn: Project
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member
+		dataType: string
+		lineageTag: 6e4fdd18-96ba-4d48-a344-3e78c049cfa1
+		summarizeBy: none
+		sourceColumn: Member
+
+		annotation SummarizationSetBy = Automatic
+
+	column Task
+		dataType: string
+		lineageTag: b617e7b9-8535-4cfb-ac25-9290b06b3705
+		summarizeBy: none
+		sourceColumn: Task
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Converted'
+		dataType: double
+		formatString: 0.00
+		lineageTag: 9541cfa5-4b69-424b-9517-41b49d1d2dad
+		summarizeBy: sum
+		sourceColumn: Time Converted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity
+		dataType: string
+		lineageTag: aa50ccd1-c2fb-4397-a1d4-0575a9e8a12a
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: 5a1b7b49-3535-4ba2-b280-c6169468abd0
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: fff30466-2960-457b-a1bd-2e2442bc842e
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		lineageTag: 6c604e36-4057-4883-b6f3-b207df129013
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0d60aa3e-66b2-4c65-b2dd-d1c0872de5f4
+		summarizeBy: none
+		sourceColumn: Time
+
+		variation Variation
+			isDefault
+			relationship: 0645b2d8-7eaf-466e-9394-f7910bfc6b8c
+			defaultHierarchy: LocalDateTable_836db120-459a-4a1c-aa19-6ca40e2eb1c6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Spent
+		dataType: double
+		lineageTag: 5417c347-aef0-456c-b129-db6124a7bd68
+		summarizeBy: sum
+		sourceColumn: Spent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Billable time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d1307de-abb2-4892-bffa-a3834057eafc
+		summarizeBy: none
+		sourceColumn: Billable time
+
+		variation Variation
+			isDefault
+			relationship: 9267d69f-5ed5-4399-b059-72efd59d1acf
+			defaultHierarchy: LocalDateTable_e18a37b9-5331-41e7-bbda-8158bf4aea88.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Non-billable time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d36bede4-bde3-40d2-bb9f-17cf024b34b9
+		summarizeBy: none
+		sourceColumn: Non-billable time
+
+		variation Variation
+			isDefault
+			relationship: 1ec98996-444e-403d-846a-8e22c8524d6a
+			defaultHierarchy: LocalDateTable_c5af5ffc-a100-485e-ab7e-14f23b171d2a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billable Time Converted'
+		dataType: double
+		lineageTag: 2d0d1f45-2dbe-4439-96bb-5ab93a6b9074
+		summarizeBy: sum
+		sourceColumn: Billable Time Converted
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Non-billable time Converted'
+		dataType: double
+		lineageTag: 85092049-517f-4eff-b0a0-35e9743e9e79
+		summarizeBy: sum
+		sourceColumn: Non-billable time Converted
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Actuals = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\BrandonA\OneDrive - BI Consulting Services\Documents\BICS Internal Work\Hubstaff Actuals YTD 2024.xlsx"), null, true),
+				    #"bi-consulting-services_time_and_Sheet" = Source{[Item="bi-consulting-services_time_and",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"bi-consulting-services_time_and_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Organization", type text}, {"Time zone", type text}, {"Date", type date}, {"Client", type text}, {"Project", type text}, {"Member", type text}, {"Task ID", Int64.Type}, {"Task", type text}, {"Time", type datetime}, {"Activity", type any}, {"Spent", type number}, {"Currency", type text}, {"Billable time", type datetime}, {"Non-billable time", type datetime}, {"Notes", type text}, {"Time Converted", type number}, {"Billable Time Converted", type number}, {"Non-billable time Converted", type number}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Task ID"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

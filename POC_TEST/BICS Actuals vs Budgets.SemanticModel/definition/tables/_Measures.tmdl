@@ -1,0 +1,69 @@
+table _Measures
+	lineageTag: ba09229a-333e-4797-84bc-e1de1917eeaa
+
+	measure 'Budget $ Utilization' = [Project Budget] - [Invoiced Amt]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: abd0f7f1-fa2f-4eb0-bb46-ed2260aa713c
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Project Budget' = SUM(Budget[Estimated Budget])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: e5f77790-0d38-4b9b-a82e-9bbc121c5595
+
+	measure 'Invoiced Amt' = SUM('Invoicing'[Amount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: e7bcf17f-9ac3-4957-820f-eb8e24a13c7e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Project Spend' = SUM(Actuals[ Spent ])
+		lineageTag: 1beb4566-8bbc-4c3f-b434-d5308276da12
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Billable Difference' = [Invoiced Amt]-[Project Spend]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: f28bc59b-7b75-41c8-91c2-2efd3710fea8
+
+	measure 'Invoiced Hours' = DIVIDE([Invoiced Amt], SUM(Budget[Hourly Rate]))
+		formatString: #,0
+		lineageTag: a4dc9f39-ff1c-4b1a-89a0-407e7360d66c
+
+	measure 'Hours Used' = SUM(Actuals[Time Converted])
+		lineageTag: 6ebb5648-5ee8-4f5f-af7e-007fe0131a3f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Budgeted Hours' = SUM(Budget[Estimated Hours])
+		formatString: 0
+		lineageTag: 13bfddb5-5cb0-4812-aa43-0610ebcf9a44
+
+	measure 'Hours Remaining' = [Budgeted Hours]- [Hours Used]
+		lineageTag: 3c5ad53c-deaf-400f-a5f6-b98b002cf363
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Hours Billed Discrepancy' = [Invoiced Hours]-[Hours Used]
+		lineageTag: 2501a30e-bd7f-4e52-b4f4-74be184c9985
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: f2f9c523-d5f5-48c2-84bd-823ff3abfeb8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = aee5327bf0094441900319edb610e88c
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

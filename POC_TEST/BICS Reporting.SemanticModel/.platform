@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "BICS Reporting"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2f14d5a2-0687-b604-479a-953fabd23747"
+  }
+}

@@ -1,0 +1,10 @@
+relationship 70f3afb4-5c9d-4932-8744-fb024263e8b4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'All Projects'.'Date Created'
+	toColumn: LocalDateTable_8a2e3f90-a6f6-4558-a786-6dc67659197d.Date
+
+relationship 07fbc8b7-41be-4883-a75e-e77d25d7edcf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'All Projects'.'Due Date'
+	toColumn: LocalDateTable_b78d6133-cdbc-4f02-a544-39f4f54ca567.Date
+

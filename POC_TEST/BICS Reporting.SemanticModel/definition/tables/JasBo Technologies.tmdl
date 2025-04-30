@@ -1,0 +1,800 @@
+table 'JasBo Technologies'
+	isHidden
+	lineageTag: 6fa45d67-d0a5-45c7-a8a5-c4b4f047ca0a
+
+	column 'tasks.id'
+		dataType: string
+		isHidden
+		lineageTag: 5aa64e22-d859-4618-8904-5efbaf253dc4
+		summarizeBy: none
+		sourceColumn: tasks.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.custom_id'
+		dataType: string
+		isHidden
+		lineageTag: 21d77a83-0f88-47a6-8c24-52474c41c96e
+		summarizeBy: none
+		sourceColumn: tasks.custom_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.custom_item_id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dd5f391b-6b5d-4c23-bcb6-d78a0300064d
+		summarizeBy: sum
+		sourceColumn: tasks.custom_item_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.name'
+		dataType: string
+		isHidden
+		lineageTag: 06970fff-73ad-43f8-88ec-c2f727ec0d3e
+		summarizeBy: none
+		sourceColumn: tasks.name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.text_content'
+		dataType: string
+		isHidden
+		lineageTag: 7c3bb173-8935-4bce-bc79-550274b9a29a
+		summarizeBy: none
+		sourceColumn: tasks.text_content
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.description'
+		dataType: string
+		isHidden
+		lineageTag: 77529a16-22b9-4d89-8819-a5e34fd91f8f
+		summarizeBy: none
+		sourceColumn: tasks.description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.status.status'
+		dataType: string
+		isHidden
+		lineageTag: 63a0a8f4-cb8a-421c-a6bf-917fb3c9b600
+		summarizeBy: none
+		sourceColumn: tasks.status.status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.status.id'
+		dataType: string
+		isHidden
+		lineageTag: c5c3f2be-fc54-4d81-989f-20a6304ffac8
+		summarizeBy: none
+		sourceColumn: tasks.status.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.status.color'
+		dataType: string
+		isHidden
+		lineageTag: b7be23be-e5d0-4348-8a59-88b7a88c8946
+		summarizeBy: none
+		sourceColumn: tasks.status.color
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.status.type'
+		dataType: string
+		isHidden
+		lineageTag: c2a8ffa0-6d93-46b5-baec-fd98733eec68
+		summarizeBy: none
+		sourceColumn: tasks.status.type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.status.orderindex'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 01041ae7-8020-4a76-94ac-c8fc8299f2e2
+		summarizeBy: sum
+		sourceColumn: tasks.status.orderindex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.orderindex'
+		dataType: double
+		isHidden
+		lineageTag: 4e2b0f62-7d26-4add-ab0a-cabad1d1f375
+		summarizeBy: sum
+		sourceColumn: tasks.orderindex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'tasks.date_created'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 53aca584-c473-4861-8769-bf6d157b7016
+		summarizeBy: sum
+		sourceColumn: tasks.date_created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.date_updated'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 86630e9f-a1e9-4071-a046-23112c6cb6b2
+		summarizeBy: sum
+		sourceColumn: tasks.date_updated
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.date_closed'
+		dataType: string
+		isHidden
+		lineageTag: 03f209a5-5d43-43f3-bef8-6be60159cd19
+		summarizeBy: none
+		sourceColumn: tasks.date_closed
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.date_done'
+		dataType: string
+		isHidden
+		lineageTag: 05404bc9-c86f-49f7-a0cc-65fb51c07f55
+		summarizeBy: none
+		sourceColumn: tasks.date_done
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.archived'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8d2003e1-7f68-4d4a-942b-bffc5f47e7d9
+		summarizeBy: none
+		sourceColumn: tasks.archived
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.creator.id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 44efc5fa-7799-4a0a-b555-fe310096fdc6
+		summarizeBy: sum
+		sourceColumn: tasks.creator.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.creator.username'
+		dataType: string
+		isHidden
+		lineageTag: ce427f4b-c09d-46cd-9d82-da2425d011b5
+		summarizeBy: none
+		sourceColumn: tasks.creator.username
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.creator.color'
+		dataType: string
+		isHidden
+		lineageTag: 88827ded-3e8d-4ba5-b527-c52bdb243354
+		summarizeBy: none
+		sourceColumn: tasks.creator.color
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.creator.email'
+		dataType: string
+		isHidden
+		lineageTag: 49d36906-d6bb-49ae-9c7c-23cc9890f3c8
+		summarizeBy: none
+		sourceColumn: tasks.creator.email
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.creator.profilePicture'
+		dataType: string
+		isHidden
+		lineageTag: 14526493-95ea-44c4-8ca8-b488c9319c5d
+		summarizeBy: none
+		sourceColumn: tasks.creator.profilePicture
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.assignees'
+		dataType: string
+		isHidden
+		lineageTag: f0f1cecf-773d-4ebe-bac4-dc463aab8025
+		summarizeBy: none
+		sourceColumn: tasks.assignees
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.group_assignees'
+		dataType: string
+		isHidden
+		lineageTag: 112d154c-3b2e-4424-bc93-13972b93fcde
+		summarizeBy: none
+		sourceColumn: tasks.group_assignees
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.watchers'
+		dataType: string
+		isHidden
+		lineageTag: 0e48b13d-f148-4c6c-8728-4570b327ef5c
+		summarizeBy: none
+		sourceColumn: tasks.watchers
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.checklists'
+		dataType: string
+		isHidden
+		lineageTag: 6a1d1794-06bb-4fb1-959b-552b6f30b880
+		summarizeBy: none
+		sourceColumn: tasks.checklists
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.tags'
+		dataType: string
+		isHidden
+		lineageTag: 0c61b37b-c0a8-4c9d-a28d-36536e285896
+		summarizeBy: none
+		sourceColumn: tasks.tags
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.parent'
+		dataType: string
+		isHidden
+		lineageTag: d5fd5204-ff4f-49bc-b980-5526f8ee5116
+		summarizeBy: none
+		sourceColumn: tasks.parent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.priority'
+		dataType: string
+		isHidden
+		lineageTag: dab325a4-c925-4c0b-bda6-60ad108fcd98
+		summarizeBy: none
+		sourceColumn: tasks.priority
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.due_date'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7df11b08-3322-43ce-b786-fb72bfbb7d68
+		summarizeBy: sum
+		sourceColumn: tasks.due_date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.start_date'
+		dataType: string
+		isHidden
+		lineageTag: 2905f8b1-20f5-4f94-976d-4980cf8cd7a1
+		summarizeBy: none
+		sourceColumn: tasks.start_date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.points'
+		dataType: string
+		isHidden
+		lineageTag: 31db0067-a6fa-4a8e-9bd6-99fb11b3860a
+		summarizeBy: none
+		sourceColumn: tasks.points
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.time_estimate'
+		dataType: string
+		isHidden
+		lineageTag: fefda20c-d961-41da-9a06-b7ff6047523e
+		summarizeBy: none
+		sourceColumn: tasks.time_estimate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.custom_fields'
+		dataType: string
+		isHidden
+		lineageTag: e1eee710-db3a-417b-8675-1d6d84c8c932
+		summarizeBy: none
+		sourceColumn: tasks.custom_fields
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.dependencies'
+		dataType: string
+		isHidden
+		lineageTag: 8d6cd17a-98fc-40aa-91ad-97e92c61ac12
+		summarizeBy: none
+		sourceColumn: tasks.dependencies
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.linked_tasks'
+		dataType: string
+		isHidden
+		lineageTag: 0fcd2acb-49c4-45a0-9d81-242519ff0104
+		summarizeBy: none
+		sourceColumn: tasks.linked_tasks
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.locations'
+		dataType: string
+		isHidden
+		lineageTag: 537c2f4f-71b3-4afa-992a-71c26980c296
+		summarizeBy: none
+		sourceColumn: tasks.locations
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.team_id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3ae9a31-5c70-412b-a472-078abb2410df
+		summarizeBy: sum
+		sourceColumn: tasks.team_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.url'
+		dataType: string
+		isHidden
+		lineageTag: e713f05c-3f07-43a1-8e9f-880372d107b9
+		summarizeBy: none
+		sourceColumn: tasks.url
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2a508d6e-deb0-41f7-ab9e-baeef5901a13
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_share_expires_on'
+		dataType: string
+		isHidden
+		lineageTag: 08e661e4-29f5-4212-8511-d630215e4cce
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_share_expires_on
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.0'
+		dataType: string
+		isHidden
+		lineageTag: f97752fb-57bd-488b-a89a-7ae35f07baf9
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.0
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.1'
+		dataType: string
+		isHidden
+		lineageTag: 32eb634a-8c37-4248-bd37-dbe56e137a43
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.2'
+		dataType: string
+		isHidden
+		lineageTag: e9350c9b-7226-48cd-8ec1-bea38daaed0c
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.3'
+		dataType: string
+		isHidden
+		lineageTag: a2ec6c54-43ad-4847-897b-af56578d721a
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.4'
+		dataType: string
+		isHidden
+		lineageTag: 665fd981-bb05-41cc-ab07-4ac1823df65a
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.4
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.5'
+		dataType: string
+		isHidden
+		lineageTag: ec1d7c84-deb5-4c32-9409-1fd80dbdd178
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.5
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.6'
+		dataType: string
+		isHidden
+		lineageTag: 3a80c2c3-5128-4868-9559-4eea1a02a5a7
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.6
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.7'
+		dataType: string
+		isHidden
+		lineageTag: 99620fa0-3b08-4f4b-9c6e-134d9df13e77
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.7
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.8'
+		dataType: string
+		isHidden
+		lineageTag: 05c365fc-0d7d-477a-93b2-fd20f52cb07e
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.8
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.9'
+		dataType: string
+		isHidden
+		lineageTag: d7c92d4c-015e-4c5f-9153-6f16479846f7
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.9
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.public_fields.10'
+		dataType: string
+		isHidden
+		lineageTag: 53da1c71-5368-47dd-b169-03cb8957bcf7
+		summarizeBy: none
+		sourceColumn: tasks.sharing.public_fields.10
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.token'
+		dataType: string
+		isHidden
+		lineageTag: 70485d99-685b-4b2a-84dd-22cdb1ee3964
+		summarizeBy: none
+		sourceColumn: tasks.sharing.token
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.sharing.seo_optimized'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5d247871-ca46-44f6-88f8-3a8c3efa1bd7
+		summarizeBy: none
+		sourceColumn: tasks.sharing.seo_optimized
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.permission_level'
+		dataType: string
+		isHidden
+		lineageTag: 8d1fa2db-80e0-4b15-8906-29d7934b665a
+		summarizeBy: none
+		sourceColumn: tasks.permission_level
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.list.id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c01dbaac-1dff-4ffb-af90-83096da8dedc
+		summarizeBy: sum
+		sourceColumn: tasks.list.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.list.name'
+		dataType: string
+		isHidden
+		lineageTag: baedcf78-d2d5-4668-a02f-859befbedd3d
+		summarizeBy: none
+		sourceColumn: tasks.list.name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.list.access'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c376cbbe-be42-4daa-975c-080749d1d137
+		summarizeBy: none
+		sourceColumn: tasks.list.access
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.project.id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 42af2a2d-db03-4c90-92f7-43498aeff6c9
+		summarizeBy: sum
+		sourceColumn: tasks.project.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.project.name'
+		dataType: string
+		isHidden
+		lineageTag: 7c74fc04-c32c-4d38-b616-c54f8c9686e8
+		summarizeBy: none
+		sourceColumn: tasks.project.name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.project.hidden'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7d6fd821-708f-448e-8f74-8817b2ee98ae
+		summarizeBy: none
+		sourceColumn: tasks.project.hidden
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.project.access'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: eb060bee-4e27-4de6-9e34-14a8cf4169ae
+		summarizeBy: none
+		sourceColumn: tasks.project.access
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.folder.id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7cc7048f-2f77-485d-bd99-abd86a42b159
+		summarizeBy: sum
+		sourceColumn: tasks.folder.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.folder.name'
+		dataType: string
+		isHidden
+		lineageTag: 3c276bd4-b871-4f97-995f-ba53d3810ad6
+		summarizeBy: none
+		sourceColumn: tasks.folder.name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.folder.hidden'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d3f32692-3dd4-4d73-a2f7-093cf53f930a
+		summarizeBy: none
+		sourceColumn: tasks.folder.hidden
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.folder.access'
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 09dbd655-90c2-430e-a614-8b6a027acf36
+		summarizeBy: none
+		sourceColumn: tasks.folder.access
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'tasks.space.id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 92e768ca-a7ce-4f07-9055-a20e256cab8c
+		summarizeBy: sum
+		sourceColumn: tasks.space.id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_page
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a368970a-b242-4786-ae81-b1e7cd2ca51f
+		summarizeBy: none
+		sourceColumn: last_page
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'JasBo Technologies' = m
+		mode: import
+		source =
+				let
+				    Source = Json.Document(Web.Contents("https://api.clickup.com/api/v2/list/901405277823/task?archived=false&include_closed=true", [Headers=[Authorization="pk_82352337_MW1MWBNX1HM4ATHKLLRXPX11IAC7WGA8"]])),
+				    #"Converted to Table" = Table.FromRecords({Source}),
+				    #"Expanded tasks" = Table.ExpandListColumn(#"Converted to Table", "tasks"),
+				    #"Expanded tasks1" = Table.ExpandRecordColumn(#"Expanded tasks", "tasks", {"id", "custom_id", "custom_item_id", "name", "text_content", "description", "status", "orderindex", "date_created", "date_updated", "date_closed", "date_done", "archived", "creator", "assignees", "group_assignees", "watchers", "checklists", "tags", "parent", "priority", "due_date", "start_date", "points", "time_estimate", "custom_fields", "dependencies", "linked_tasks", "locations", "team_id", "url", "sharing", "permission_level", "list", "project", "folder", "space"}, {"tasks.id", "tasks.custom_id", "tasks.custom_item_id", "tasks.name", "tasks.text_content", "tasks.description", "tasks.status", "tasks.orderindex", "tasks.date_created", "tasks.date_updated", "tasks.date_closed", "tasks.date_done", "tasks.archived", "tasks.creator", "tasks.assignees", "tasks.group_assignees", "tasks.watchers", "tasks.checklists", "tasks.tags", "tasks.parent", "tasks.priority", "tasks.due_date", "tasks.start_date", "tasks.points", "tasks.time_estimate", "tasks.custom_fields", "tasks.dependencies", "tasks.linked_tasks", "tasks.locations", "tasks.team_id", "tasks.url", "tasks.sharing", "tasks.permission_level", "tasks.list", "tasks.project", "tasks.folder", "tasks.space"}),
+				    #"Expanded tasks.status" = Table.ExpandRecordColumn(#"Expanded tasks1", "tasks.status", {"status", "id", "color", "type", "orderindex"}, {"tasks.status.status", "tasks.status.id", "tasks.status.color", "tasks.status.type", "tasks.status.orderindex"}),
+				    #"Expanded tasks.creator" = Table.ExpandRecordColumn(#"Expanded tasks.status", "tasks.creator", {"id", "username", "color", "email", "profilePicture"}, {"tasks.creator.id", "tasks.creator.username", "tasks.creator.color", "tasks.creator.email", "tasks.creator.profilePicture"}),
+				    #"Expanded tasks.sharing" = Table.ExpandRecordColumn(#"Expanded tasks.creator", "tasks.sharing", {"public", "public_share_expires_on", "public_fields", "token", "seo_optimized"}, {"tasks.sharing.public", "tasks.sharing.public_share_expires_on", "tasks.sharing.public_fields", "tasks.sharing.token", "tasks.sharing.seo_optimized"}),
+				    #"Split Column" = Table.SplitColumn(#"Expanded tasks.sharing", "tasks.sharing.public_fields", each _, {"tasks.sharing.public_fields.0", "tasks.sharing.public_fields.1", "tasks.sharing.public_fields.2", "tasks.sharing.public_fields.3", "tasks.sharing.public_fields.4", "tasks.sharing.public_fields.5", "tasks.sharing.public_fields.6", "tasks.sharing.public_fields.7", "tasks.sharing.public_fields.8", "tasks.sharing.public_fields.9", "tasks.sharing.public_fields.10"}),
+				    #"Expanded tasks.list" = Table.ExpandRecordColumn(#"Split Column", "tasks.list", {"id", "name", "access"}, {"tasks.list.id", "tasks.list.name", "tasks.list.access"}),
+				    #"Expanded tasks.project" = Table.ExpandRecordColumn(#"Expanded tasks.list", "tasks.project", {"id", "name", "hidden", "access"}, {"tasks.project.id", "tasks.project.name", "tasks.project.hidden", "tasks.project.access"}),
+				    #"Expanded tasks.folder" = Table.ExpandRecordColumn(#"Expanded tasks.project", "tasks.folder", {"id", "name", "hidden", "access"}, {"tasks.folder.id", "tasks.folder.name", "tasks.folder.hidden", "tasks.folder.access"}),
+				    #"Expanded tasks.space" = Table.ExpandRecordColumn(#"Expanded tasks.folder", "tasks.space", {"id"}, {"tasks.space.id"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded tasks.space",{{"tasks.id", type text}, {"tasks.custom_id", type any}, {"tasks.custom_item_id", Int64.Type}, {"tasks.name", type text}, {"tasks.text_content", type text}, {"tasks.description", type text}, {"tasks.status.status", type text}, {"tasks.status.id", type text}, {"tasks.status.color", type text}, {"tasks.status.type", type text}, {"tasks.status.orderindex", Int64.Type}, {"tasks.orderindex", type number}, {"tasks.date_created", Int64.Type}, {"tasks.date_updated", Int64.Type}, {"tasks.date_closed", type any}, {"tasks.date_done", type any}, {"tasks.archived", type logical}, {"tasks.creator.id", Int64.Type}, {"tasks.creator.username", type text}, {"tasks.creator.color", type text}, {"tasks.creator.email", type text}, {"tasks.creator.profilePicture", type any}, {"tasks.assignees", type any}, {"tasks.group_assignees", type any}, {"tasks.watchers", type any}, {"tasks.checklists", type any}, {"tasks.tags", type any}, {"tasks.parent", type any}, {"tasks.priority", type any}, {"tasks.due_date", Int64.Type}, {"tasks.start_date", type any}, {"tasks.points", type any}, {"tasks.time_estimate", type any}, {"tasks.custom_fields", type any}, {"tasks.dependencies", type any}, {"tasks.linked_tasks", type any}, {"tasks.locations", type any}, {"tasks.team_id", Int64.Type}, {"tasks.url", type text}, {"tasks.sharing.public", type logical}, {"tasks.sharing.public_share_expires_on", type any}, {"tasks.sharing.public_fields.0", type text}, {"tasks.sharing.public_fields.1", type text}, {"tasks.sharing.public_fields.2", type text}, {"tasks.sharing.public_fields.3", type text}, {"tasks.sharing.public_fields.4", type text}, {"tasks.sharing.public_fields.5", type text}, {"tasks.sharing.public_fields.6", type text}, {"tasks.sharing.public_fields.7", type text}, {"tasks.sharing.public_fields.8", type text}, {"tasks.sharing.public_fields.9", type text}, {"tasks.sharing.public_fields.10", type text}, {"tasks.sharing.token", type any}, {"tasks.sharing.seo_optimized", type logical}, {"tasks.permission_level", type text}, {"tasks.list.id", Int64.Type}, {"tasks.list.name", type text}, {"tasks.list.access", type logical}, {"tasks.project.id", Int64.Type}, {"tasks.project.name", type text}, {"tasks.project.hidden", type logical}, {"tasks.project.access", type logical}, {"tasks.folder.id", Int64.Type}, {"tasks.folder.name", type text}, {"tasks.folder.hidden", type logical}, {"tasks.folder.access", type logical}, {"tasks.space.id", Int64.Type}, {"last_page", type logical}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

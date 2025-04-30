@@ -1,0 +1,93 @@
+table Budget
+	lineageTag: 47d0b58c-53c0-4264-8a5b-6c908260f566
+
+	column 'Project Name'
+		dataType: string
+		lineageTag: c92f5f22-b01f-427e-9c54-509898a46fe9
+		summarizeBy: none
+		sourceColumn: Project Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 92b2259c-95f0-40ab-bc7a-f30dc3f75002
+		summarizeBy: none
+		sourceColumn: Start Date
+
+		variation Variation
+			isDefault
+			relationship: 95eea841-861e-4dc2-aaf4-9ee9726a6f70
+			defaultHierarchy: LocalDateTable_f772489e-bbad-4813-8256-45008bf89900.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Estimated Hours'
+		dataType: int64
+		formatString: 0
+		lineageTag: 67a37420-8f18-4a4c-a864-ab85883fef0f
+		summarizeBy: sum
+		sourceColumn: Estimated Hours
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Hourly Rate'
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 25ce40ce-4870-4545-8d0d-1f113caa3702
+		summarizeBy: sum
+		sourceColumn: Hourly Rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estimated Budget'
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7f42658c-d882-4191-8b38-2e636b28068a
+		summarizeBy: sum
+		sourceColumn: Estimated Budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Manager'
+		dataType: string
+		lineageTag: d7dd2c7a-fa1e-4226-976c-983c1ea2366e
+		summarizeBy: none
+		sourceColumn: Project Manager
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Type'
+		dataType: string
+		lineageTag: 5e5ca02d-a0df-41d4-8363-9e803bbae6f1
+		summarizeBy: none
+		sourceColumn: Project Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: fde2d6c9-3a4a-4fe5-a6f4-d4ffbccfe59b
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Budget = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\BrandonA\OneDrive - BI Consulting Services\Documents\BICS Internal Work\Budget File.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Project Name", type text}, {"Start Date", type date}, {"Estimated Hours", Int64.Type}, {"Hourly Rate", Int64.Type}, {"Estimated Budget", Int64.Type}, {"Project Manager", type text}, {"Project Type", type text}, {"Notes", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,153 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b6f4bcc8806466e8ae86",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6c73e0f75243bab92a02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":783.5897435897436,\"y\":0,\"z\":2,\"width\":496.4102564102564,\"height\":234.8717948717949,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Status Count\"}],\"Category\":[{\"queryRef\":\"All Projects.tasks.status.status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Status Count\"},\"Name\":\"_Measures.Status Count\",\"NativeReferenceName\":\"Status Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"},\"Name\":\"All Projects.tasks.status.status\",\"NativeReferenceName\":\"Task Status\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Status Count\"}}}]},\"columnProperties\":{\"All Projects.tasks.status.status\":{\"displayName\":\"Task Status\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 234.87,
+          "width": 496.41,
+          "x": 783.59,
+          "y": 0.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"8cfdfc34b845ee022c98\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":113.84615384615385,\"z\":1,\"width\":238.97435897435898,\"height\":121.02564102564102,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Task Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"dd14771545b8090e0d37\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Projects\"}},\"Property\":\"tasks.status.status\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'complete'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 121.03,
+          "width": 238.97,
+          "x": 0.00,
+          "y": 113.85,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"b2589f147ebc0d203503\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":458.46153846153845,\"z\":4,\"width\":1280,\"height\":261.53846153846155,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"All Projects.tasks.project.name\"},{\"queryRef\":\"All Projects.tasks.status.status\"},{\"queryRef\":\"All Projects.Date Created\"},{\"queryRef\":\"All Projects.Due Date\"},{\"queryRef\":\"All Projects.tasks.url\"},{\"queryRef\":\"All Projects.tasks.assignees.username\"},{\"queryRef\":\"All Projects.tasks.priority.priority\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.project.name\"},\"Name\":\"All Projects.tasks.project.name\",\"NativeReferenceName\":\"Project Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"},\"Name\":\"All Projects.tasks.status.status\",\"NativeReferenceName\":\"Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.url\"},\"Name\":\"All Projects.tasks.url\",\"NativeReferenceName\":\"Task URL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.priority.priority\"},\"Name\":\"All Projects.tasks.priority.priority\",\"NativeReferenceName\":\"Priority\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Due Date\"},\"Name\":\"All Projects.Due Date\",\"NativeReferenceName\":\"Due Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Date Created\"},\"Name\":\"All Projects.Date Created\",\"NativeReferenceName\":\"Date Created\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.assignees.username\"},\"Name\":\"All Projects.tasks.assignees.username\",\"NativeReferenceName\":\"Assignee\"}]},\"columnProperties\":{\"All Projects.tasks.assignees.username\":{\"displayName\":\"Assignee\"},\"All Projects.tasks.project.name\":{\"displayName\":\"Project Name\"},\"All Projects.tasks.status.status\":{\"displayName\":\"Status\"},\"All Projects.tasks.url\":{\"displayName\":\"Task URL\"},\"All Projects.tasks.priority.priority\":{\"displayName\":\"Priority\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"webURL\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Projects\"}},\"Property\":\"tasks.url\"}},\"Function\":3}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"All Projects.tasks.url\"}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"433.46153846153845D\"}}}},\"selector\":{\"metadata\":\"All Projects.tasks.project.name\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"122.15386136036783D\"}}}},\"selector\":{\"metadata\":\"All Projects.tasks.status.status\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"120.8205174899893D\"}}}},\"selector\":{\"metadata\":\"All Projects.Date Created\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"85.33333101480929D\"}}}},\"selector\":{\"metadata\":\"All Projects.Due Date\"}}]}}}",
+          "filters": "[]",
+          "height": 261.54,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 458.46,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"d88a458f4d30907340ad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":238.97435897435898,\"height\":121.02564102564102,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Project Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Project Count\"},\"Name\":\"_Measures.Project Count\",\"NativeReferenceName\":\"Project Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Project Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.03,
+          "width": 238.97,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"de1b96a832d0050e0581\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":234.8717948717949,\"z\":5,\"width\":570.2564102564103,\"height\":223.5897435897436,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"All Projects.tasks.assignees.username\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Task Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.assignees.username\"},\"Name\":\"All Projects.tasks.assignees.username\",\"NativeReferenceName\":\"Assignee\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"columnProperties\":{\"All Projects.tasks.assignees.username\":{\"displayName\":\"Assignee\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"dcffc37e6e79dc4b7834\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Projects\"}},\"Property\":\"tasks.status.status\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'complete'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 223.59,
+          "width": 570.26,
+          "x": 0.00,
+          "y": 234.87,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"e883d9476253cd24dadb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":238.97435897435898,\"y\":0,\"z\":3,\"width\":544.6153846153846,\"height\":234.8717948717949,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Task Count\"}],\"Category\":[{\"queryRef\":\"All Projects.tasks.project.name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.project.name\"},\"Name\":\"All Projects.tasks.project.name\",\"NativeReferenceName\":\"Project Name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"columnProperties\":{\"All Projects.tasks.project.name\":{\"displayName\":\"Project Name\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"447c28135844ca514970\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Projects\"}},\"Property\":\"tasks.status.status\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'complete'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 234.87,
+          "width": 544.62,
+          "x": 238.97,
+          "y": 0.00,
+          "z": 3.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Duplicate of Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f2f73acd5617489ca571",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3496f516ed09597625b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":238.97435897435898,\"y\":0,\"z\":3000,\"width\":544.6153846153846,\"height\":234.8717948717949,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Task Count\"}],\"Category\":[{\"queryRef\":\"All Projects.tasks.project.name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.project.name\"},\"Name\":\"All Projects.tasks.project.name\",\"NativeReferenceName\":\"tasks.project.name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 234.87,
+          "width": 544.62,
+          "x": 238.97,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"37e37646374c19bc8e23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":113.84615384615385,\"z\":1000,\"width\":238.97435897435898,\"height\":121.02564102564102,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Task Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.03,
+          "width": 238.97,
+          "x": 0.00,
+          "y": 113.85,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"48469abc474500c3b900\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":238.97435897435898,\"height\":121.02564102564102,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Project Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Project Count\"},\"Name\":\"_Measures.Project Count\",\"NativeReferenceName\":\"Project Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Project Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.03,
+          "width": 238.97,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b072fd96971d780b6950\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":234.8717948717949,\"z\":5000,\"width\":724.1025641025641,\"height\":207.17948717948718,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"All Projects.tasks.assignees.username\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Task Count\"}],\"Series\":[{\"queryRef\":\"All Projects.tasks.project.name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.assignees.username\"},\"Name\":\"All Projects.tasks.assignees.username\",\"NativeReferenceName\":\"tasks.assignees.username\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"},\"Name\":\"_Measures.Task Count\",\"NativeReferenceName\":\"Task Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.project.name\"},\"Name\":\"All Projects.tasks.project.name\",\"NativeReferenceName\":\"tasks.project.name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Task Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"optimizeLabelDisplay\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 207.18,
+          "width": 724.10,
+          "x": 0.00,
+          "y": 234.87,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"d3c30a0e35d8153451d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":442.05128205128204,\"z\":4000,\"width\":1280,\"height\":277.94871794871796,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"All Projects.tasks.project.name\"},{\"queryRef\":\"All Projects.tasks.status.status\"},{\"queryRef\":\"All Projects.tasks.time_estimate\"},{\"queryRef\":\"All Projects.tasks.start_date\"},{\"queryRef\":\"Sum(All Projects.tasks.due_date)\"},{\"queryRef\":\"Sum(All Projects.tasks.date_created)\"},{\"queryRef\":\"All Projects.tasks.date_closed\"},{\"queryRef\":\"All Projects.tasks.url\"},{\"queryRef\":\"All Projects.tasks.priority.priority\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.project.name\"},\"Name\":\"All Projects.tasks.project.name\",\"NativeReferenceName\":\"tasks.project.name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.time_estimate\"},\"Name\":\"All Projects.tasks.time_estimate\",\"NativeReferenceName\":\"tasks.time_estimate\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.start_date\"},\"Name\":\"All Projects.tasks.start_date\",\"NativeReferenceName\":\"tasks.start_date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.due_date\"},\"Name\":\"Sum(All Projects.tasks.due_date)\",\"NativeReferenceName\":\"tasks.due_date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.date_created\"},\"Name\":\"Sum(All Projects.tasks.date_created)\",\"NativeReferenceName\":\"tasks.date_created\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.date_closed\"},\"Name\":\"All Projects.tasks.date_closed\",\"NativeReferenceName\":\"tasks.date_closed\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"},\"Name\":\"All Projects.tasks.status.status\",\"NativeReferenceName\":\"tasks.status.status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.url\"},\"Name\":\"All Projects.tasks.url\",\"NativeReferenceName\":\"tasks.url\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.priority.priority\"},\"Name\":\"All Projects.tasks.priority.priority\",\"NativeReferenceName\":\"tasks.priority.priority\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 277.95,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 442.05,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f750d850200d4c5ea417\",\"layouts\":[{\"id\":0,\"position\":{\"x\":783.5897435897436,\"y\":0,\"z\":2000,\"width\":496.4102564102564,\"height\":234.8717948717949,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Status Count\"}],\"Category\":[{\"queryRef\":\"All Projects.tasks.status.status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"All Projects\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Status Count\"},\"Name\":\"_Measures.Status Count\",\"NativeReferenceName\":\"Status Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"tasks.status.status\"},\"Name\":\"All Projects.tasks.status.status\",\"NativeReferenceName\":\"tasks.status.status\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Status Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 234.87,
+          "width": 496.41,
+          "x": 783.59,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

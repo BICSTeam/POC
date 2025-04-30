@@ -1,0 +1,33 @@
+table _Measures
+	lineageTag: cb62db5a-a3ca-4a34-bd71-c4cd008b4dea
+
+	measure 'Task Count' = DISTINCTCOUNT('All Projects'[tasks.id])
+		formatString: 0
+		lineageTag: 427a655a-9866-4f63-aa24-8a0191962760
+
+	measure 'Project Count' = DISTINCTCOUNT('All Projects'[tasks.project.id])
+		formatString: 0
+		lineageTag: 6f40e68a-12d4-4211-843b-1adaf8b24a6b
+
+	measure 'Status Count' = COUNT('All Projects'[tasks.status.status])
+		formatString: 0
+		lineageTag: 6a35a0a3-b6bb-49ae-9902-4aa7ee4bccef
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 629aa7ad-052e-42fa-99b1-9207ea00df62
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 80f68d2c693b4c34b91b5a48243d6c69
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

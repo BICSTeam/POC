@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ef823b87de6b7203c3ae",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"40eaada508ec68dacd83\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.309236947791165,\"y\":127.4859437751004,\"z\":1,\"width\":629.2048192771084,\"height\":312.54618473895584,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Hubstaff_Actuals_YTD.Client\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hubstaff_Actuals_YTD\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Client\"},\"Name\":\"Hubstaff_Actuals_YTD.Client\",\"NativeReferenceName\":\"Client\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Time Converted\"}},\"Function\":0},\"Name\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\",\"NativeReferenceName\":\"Sum of Time Converted\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Time Converted\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 312.55,
+          "width": 629.20,
+          "x": 11.31,
+          "y": 127.49,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"ac17d8e665b1b07bcc24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640.5140562248996,\"y\":127.4859437751004,\"z\":2,\"width\":639.4859437751004,\"height\":312.54618473895584,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"Hubstaff_Actuals_YTD.Project\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hubstaff_Actuals_YTD\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Project\"},\"Name\":\"Hubstaff_Actuals_YTD.Project\",\"NativeReferenceName\":\"Project\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Time Converted\"}},\"Function\":0},\"Name\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\",\"NativeReferenceName\":\"Sum of Time Converted\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Time Converted\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 312.55,
+          "width": 639.49,
+          "x": 640.51,
+          "y": 127.49,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"c534c4c7de0b30a63350\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":440.03212851405624,\"z\":0,\"width\":1280,\"height\":279.64658634538154,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Hubstaff_Actuals_YTD.Client\"},{\"queryRef\":\"Hubstaff_Actuals_YTD.Project\"},{\"queryRef\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hubstaff_Actuals_YTD\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Client\"},\"Name\":\"Hubstaff_Actuals_YTD.Client\",\"NativeReferenceName\":\"Client\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Project\"},\"Name\":\"Hubstaff_Actuals_YTD.Project\",\"NativeReferenceName\":\"Project\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Time Converted\"}},\"Function\":0},\"Name\":\"Sum(Hubstaff_Actuals_YTD.Time Converted)\",\"NativeReferenceName\":\"Sum of Time Converted\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 279.65,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 440.03,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

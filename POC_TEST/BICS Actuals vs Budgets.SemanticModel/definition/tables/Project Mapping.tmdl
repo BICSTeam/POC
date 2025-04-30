@@ -1,0 +1,34 @@
+table 'Project Mapping'
+	lineageTag: 4da6e722-824b-49d9-9350-2889af99a8ff
+
+	column Client
+		dataType: string
+		lineageTag: 4a8406a2-e157-46d4-b0f7-a5a793194b07
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client Mapping'
+		dataType: string
+		lineageTag: 1e8f6b36-8ec4-4923-81bc-b4790eb1f5d1
+		summarizeBy: none
+		sourceColumn: Client Mapping
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Project Mapping' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\BrandonA\OneDrive - BI Consulting Services\Documents\BICS Internal Work\Budget File.xlsx"), null, true),
+				    #"Client Mapping_Sheet" = Source{[Item="Client Mapping",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"Client Mapping_Sheet",{{"Column1", type text}, {"Column2", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true])
+				in
+				    #"Promoted Headers"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

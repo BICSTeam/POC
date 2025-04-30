@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "BICS Actuals vs Budgets"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "86705728-c822-8ac8-46ef-46c92dee10cd"
+  }
+}
