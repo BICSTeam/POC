@@ -1,0 +1,35 @@
+table WeatherForecast
+	lineageTag: 0341f700-c84f-465f-af53-4fde55a77e9e
+	sourceLineageTag: [dbo].[WeatherForecast]
+
+	column time
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c3ca89e2-fd52-4909-ae4a-b9a52bbf39ce
+		sourceLineageTag: time
+		summarizeBy: none
+		sourceColumn: time
+
+		annotation SummarizationSetBy = Automatic
+
+	column temperature
+		dataType: double
+		sourceProviderType: float
+		lineageTag: cbc4df4d-a575-4208-b392-6624054f6fa2
+		sourceLineageTag: temperature
+		summarizeBy: sum
+		sourceColumn: temperature
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition WeatherForecast = entity
+		mode: directLake
+		source
+			entityName: WeatherForecast
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
